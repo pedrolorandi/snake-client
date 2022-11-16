@@ -1,6 +1,7 @@
 let connection;
 
-const setupInput = function (conn) {
+// Event listener for the user inputs
+const setupInput = function(conn) {
   connection = conn;
   const stdin = process.stdin;
   stdin.setRawMode(true);
@@ -10,7 +11,8 @@ const setupInput = function (conn) {
   return stdin;
 };
 
-const handleUserInput = function (key) {
+// Callback function to handle user input
+const handleUserInput = function(key) {
   if (key === '\u0003') {
     process.exit();
   }
